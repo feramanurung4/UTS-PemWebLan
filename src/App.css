@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   gap: 12px;
 }
+.footer {
+  background-color: #FFF0F5;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
