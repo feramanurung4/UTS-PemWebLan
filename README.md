@@ -1,7 +1,8 @@
 # UTS PWL
-Nama : Ferawati Manurung
-Nim : 120140196
-Kelas : RB
+
+- Nama : Ferawati Manurung
+- Nim : 120140196
+- Kelas : RB
 
 cara menjalankan :
 - install node.js
