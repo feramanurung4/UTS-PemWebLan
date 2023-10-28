@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button, Form, Modal, Spinner } from 'react-bootstrap';
-import EditProduct from "../services/EditProduct";
+import editProduct from "../services/EditProduct";
 
 const EditProduct = ({ show, handleClose, onUpdate, data }) => {
    const [loading, setLoading] = useState(false);
