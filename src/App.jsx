@@ -66,6 +66,11 @@ function App() {
       <AddProduct show={showAddProduct} handleClose={handleClose} onCreate={onCreate} />
       <EditProduct show={showEditProduct} handleClose={handleClose} onUpdate={onUpdate} data={data} />
     </div>
+    <div>
+     <footer className="footer">
+        <p>Copyright &copy; 2023 Ferawati Manurung UTS PWL </p>
+      </footer>
+    </div>
   )
 }
 
