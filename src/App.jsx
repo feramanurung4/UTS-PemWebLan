@@ -48,29 +48,30 @@ function App() {
   }, [])
 
   return (
-    <div className="container">
-      <div className="d-flex justify-content-between mt-5">
-        <h1>List Product</h1>
-        <Button variant="primary"
-          onClick={() => setShowAddProduct(true)}
-        >
-          Tambah Product
-        </Button>
+    <div>
+      <div className="container">
+        <div className="d-flex justify-content-between mt-5">
+          <h1>List Product</h1>
+          <Button variant="primary"
+            onClick={() => setShowAddProduct(true)}
+          >
+            Tambah Product
+          </Button>
+        </div>
+        <div className="product-list mt-5">
+          {loading && <LoadingSpinner />}
+          {!loading && products.map(product => {
+            return <ProductCard product={product} key={product.id} fetchProducts={fetchProducts} handleSetData={() => handleSetData(product)} />
+          })}
+        </div>
+        <AddProduct show={showAddProduct} handleClose={handleClose} onCreate={onCreate} />
+        <EditProduct show={showEditProduct} handleClose={handleClose} onUpdate={onUpdate} data={data} />
       </div>
-      <div className="product-list mt-5">
-        {loading && <LoadingSpinner />}
-        {!loading && products.map(product => {
-          return <ProductCard product={product} key={product.id} fetchProducts={fetchProducts} handleSetData={() => handleSetData(product)} />
-        })}
-      </div>
-      <AddProduct show={showAddProduct} handleClose={handleClose} onCreate={onCreate} />
-      <EditProduct show={showEditProduct} handleClose={handleClose} onUpdate={onUpdate} data={data} />
+      
+       <footer className="footer">
+          <p>Copyright &copy; 2023 Ferawati Manurung UTS PWL </p>
+        </footer>
     </div>
-    
-     <footer className="footer">
-        <p>Copyright &copy; 2023 Ferawati Manurung UTS PWL </p>
-      </footer>
-    
   );
 }
 
